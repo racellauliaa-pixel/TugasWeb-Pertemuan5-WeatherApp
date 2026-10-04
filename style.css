@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.weather-app {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+/* ===== Search Form ===== */
+#searchForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#searchForm button {
+  padding: 0.65rem 1.1rem;
+  background-color: #0083b0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#searchForm button:hover {
+  background-color: #006a8e;
+}
+
+/* ===== Riwayat Pencarian ===== */
+.history-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.history-row:empty {
+  margin-bottom: 0;
+}
+
+.history-tag {
+  background-color: #eef6fb;
+  color: #0083b0;
+  border: 1px solid #bfe3f2;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.history-tag:hover {
+  background-color: #dceefa;
+}
+
+/* ===== Loading & Error ===== */
+.hidden {
+  display: none;
+}
+
+#loading {
+  padding: 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+#error {
+  background-color: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6c0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Weather Result ===== */
+#weatherResult h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+#weatherResult img {
+  width: 90px;
+  height: 90px;
+}
+
+.temp {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0083b0;
+  margin: 0.2rem 0;
+}
+
+#description {
+  text-transform: capitalize;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+#humidity {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsif (mobile-friendly) ===== */
+@media (max-width: 420px) {
+  .weather-app {
+    padding: 1.5rem;
+  }
+
+  #searchForm {
+    flex-direction: column;
+  }
+
+  .temp {
+    font-size: 2rem;
+  }
+}
